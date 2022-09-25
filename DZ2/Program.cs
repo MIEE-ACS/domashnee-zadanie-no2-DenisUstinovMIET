@@ -61,14 +61,30 @@ namespace DZ2
                 }
             }
 
+            double r;
             Console.Write("Введите радиус: ");
-            double r = double.Parse(Console.ReadLine());
+            while (!double.TryParse(Console.ReadLine(), out r))
+            {
+                Console.Write("Ошибка ввода! Введите радиус в виде числа:");
+            }
+            /*Console.Write("Введите радиус: ");
+            do
+            {
+                Console.WriteLine("Ошибка ввода! Введите радиус:");
+                r = double.Parse(Console.ReadLine());
+                Console.WriteLine("Ошибка ввода! Введите радиус:");
+            } while (!double.TryParse(Console.ReadLine(), out r));
+            */
             if (r<2) r = 0;
 
             while (true)
             {
                 Console.Write("Введите аргумент функции: ");
-                double x = double.Parse(Console.ReadLine());
+                double x;
+                while (!double.TryParse(Console.ReadLine(), out x))
+                {
+                    Console.Write("Ошибка ввода! Введите аргумент функции в виде числа:");
+                }
 
                 if (x == -3)
                 {
