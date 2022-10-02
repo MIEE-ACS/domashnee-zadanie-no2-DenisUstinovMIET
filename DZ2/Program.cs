@@ -68,14 +68,7 @@ namespace DZ2
             {
                 Console.Write("Ошибка ввода! Введите радиус в виде числа:");
             }
-            /*Console.Write("Введите радиус: ");
-            do
-            {
-                Console.WriteLine("Ошибка ввода! Введите радиус:");
-                r = double.Parse(Console.ReadLine());
-                Console.WriteLine("Ошибка ввода! Введите радиус:");
-            } while (!double.TryParse(Console.ReadLine(), out r));
-            */
+
             if (r<2) r = 0;
 
             while (true)
